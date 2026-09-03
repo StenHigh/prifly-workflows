@@ -9,17 +9,17 @@ workflows:
     title: AI Factory classic development workflow
     description: Canonical AI Factory development workflow with bounded plan improvement.
     category: software-delivery
-    repository: https://gitlab.com/stenhigh/prifly.git
-    path: examples/aif-classic
-    ref: v0.4.0
-    commit: 75c5203d1cb7566a8771e2ef5027345db58f30a9
+    repository: https://github.com/StenHigh/prifly-aif-workflows.git
+    path: aif-classic
+    ref: v1.0.0
+    commit: 6543137db0f3a4ef0b1ec0d2a8dfc94f8c3c92cf
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
     description: Optional AI Factory plan refinement with independent review perspectives.
     category: software-delivery
-    repository: https://gitlab.com/stenhigh/prifly.git
-    path: examples/aif-fanout
-    ref: v0.4.0
-    commit: 75c5203d1cb7566a8771e2ef5027345db58f30a9
+    repository: https://github.com/StenHigh/prifly-aif-workflows.git
+    path: aif-fanout
+    ref: v1.0.0
+    commit: 6543137db0f3a4ef0b1ec0d2a8dfc94f8c3c92cf
     tags: [ai-factory, codex-cli, codex-app, claude-code]

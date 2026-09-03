@@ -67,8 +67,9 @@ workflows:
 
 | Имя | Категория | Репозиторий |
 |---|---|---|
-| `aif-classic` | software-delivery | `examples/aif-classic` в Pri-Fly `v0.4.0` |
-| `aif-fanout` | software-delivery | `examples/aif-fanout` в Pri-Fly `v0.4.0` |
+| `aif-classic` | software-delivery | `aif-classic` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) `v1.0.0` |
+| `aif-fanout` | software-delivery | `aif-fanout` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) `v1.0.0` |
 
 Оба сценария требуют skills AI Factory в host root проекта; их совместимость
-с опубликованным AI Factory package отслеживается в roadmap Pri-Fly.
+с опубликованным AI Factory package отслеживается в backlog репозитория
+`StenHigh/prifly-aif-workflows`.
