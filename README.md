@@ -1,23 +1,50 @@
-# Pri-Fly workflow catalog
+<h1 align="center">Pri-Fly workflow catalog</h1>
 
-Каталог сценариев [Pri-Fly](https://gitlab.com/stenhigh/prifly): категории и
-указатели на Git-репозитории, в которых лежат Project workflow folders.
+<p align="center">
+  Каталог сценариев <a href="https://gitlab.com/stenhigh/prifly">Pri-Fly</a>:
+  категории и указатели на Git-репозитории, в которых лежат Project workflow
+  folders. Один <code>catalog.yaml</code>, никаких bytes сценариев, ключей или trust.
+</p>
 
-Каталог служит только для поиска. Он не хранит bytes сценариев, ключи или
-trust: установка копирует папку из указанного репозитория в tracked
-`.prifly/workflows/NAME/` проекта, а доверие package по-прежнему решается
-владельцем при `prifly project start`.
+<p align="center">
+  <a href="https://github.com/StenHigh/prifly-workflows/commits/main"><img src="https://img.shields.io/github/last-commit/StenHigh/prifly-workflows?label=catalog%20updated&amp;color=1f6feb" alt="catalog updated"></a>
+  <img src="https://img.shields.io/badge/schema-prifly--workflow--catalog%2F1-00ADD8" alt="prifly-workflow-catalog/1">
+  <img src="https://img.shields.io/badge/entries-2-4b5563" alt="2 entries">
+</p>
+
+<p align="center">
+  <a href="#использование">Использование</a> ·
+  <a href="#формат-catalogyaml">Формат</a> ·
+  <a href="#как-добавить-сценарий">Как добавить сценарий</a> ·
+  <a href="#записи">Записи</a> ·
+  <a href="https://github.com/StenHigh/prifly-aif-workflows">AI Factory</a> ·
+  <a href="https://gitlab.com/stenhigh/prifly">Pri-Fly</a>
+</p>
+
+<p align="center">
+  <img src="assets/readme/hero.jpg" alt="Кабина: журнал активных сценариев и их маршрутов — каталог показывает, откуда и что можно поставить" width="100%">
+</p>
+
+Каталог служит только для поиска. Установка копирует папку из указанного
+репозитория в tracked `.prifly/workflows/NAME/` проекта, а доверие package
+по-прежнему решается владельцем при `prifly project start`.
 
 ## Использование
 
+Этот репозиторий встроен в Pri-Fly как каталог по умолчанию (в версиях после
+`v0.5.0`, где появились команды `project workflows`):
+
 ```sh
-prifly project workflows search --catalog https://github.com/StenHigh/prifly-workflows.git
-prifly project workflows add aif-classic --catalog https://github.com/StenHigh/prifly-workflows.git
+prifly project workflows search                 # весь каталог
+prifly project workflows search review          # подстрока по имени, описанию и tags
+prifly project workflows search --category software-delivery
+prifly project workflows add aif-classic        # запись → .prifly/workflows/aif-classic
+prifly project workflows update aif-classic     # к exact commit того же ref
 ```
 
-Команды описаны в OpenSpec change `add-project-workflow-catalog` репозитория
-Pri-Fly и появятся в следующем release. До него каталог можно читать как
-обычный YAML и копировать папку из `repository/path` вручную.
+Другой каталог указывается флагом `--catalog URL`. До релиза с этими
+командами `catalog.yaml` можно читать как обычный YAML и копировать папку из
+`repository/path` вручную.
 
 ## Формат `catalog.yaml`
 
@@ -51,7 +78,9 @@ workflows:
 - Новая версия сценария должна поднимать `package.version` в его
   `workflow.yaml`; иначе проект после обновления столкнётся с уже sealed
   package той же identity.
-- Неизвестные поля отклоняются.
+- Неизвестные поля отклоняются. Локальная JSON Schema для редактора —
+  [`workflow-catalog-v1.schema.json`](https://gitlab.com/stenhigh/prifly/-/blob/main/schemas/authoring/workflow-catalog-v1.schema.json)
+  в репозитории Pri-Fly.
 
 ## Как добавить сценарий
 
