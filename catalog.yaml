@@ -1,0 +1,25 @@
+schema_version: prifly-workflow-catalog/1
+title: Pri-Fly workflow catalog
+categories:
+  software-delivery:
+    title: Software delivery
+    description: Development cycles for AI-assisted coding hosts such as Codex and Claude Code.
+workflows:
+  aif-classic:
+    title: AI Factory classic development workflow
+    description: Canonical AI Factory development workflow with bounded plan improvement.
+    category: software-delivery
+    repository: https://gitlab.com/stenhigh/prifly.git
+    path: examples/aif-classic
+    ref: v0.4.0
+    commit: 75c5203d1cb7566a8771e2ef5027345db58f30a9
+    tags: [ai-factory, codex-cli, codex-app, claude-code]
+  aif-fanout:
+    title: AI Factory fan-out plan refinement
+    description: Optional AI Factory plan refinement with independent review perspectives.
+    category: software-delivery
+    repository: https://gitlab.com/stenhigh/prifly.git
+    path: examples/aif-fanout
+    ref: v0.4.0
+    commit: 75c5203d1cb7566a8771e2ef5027345db58f30a9
+    tags: [ai-factory, codex-cli, codex-app, claude-code]
