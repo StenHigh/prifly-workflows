@@ -1,7 +1,7 @@
 <h1 align="center">Pri-Fly workflow catalog</h1>
 
 <p align="center">
-  Каталог сценариев <a href="https://gitlab.com/stenhigh/prifly">Pri-Fly</a>:
+  Каталог сценариев <a href="https://github.com/StenHigh/prifly">Pri-Fly</a>:
   категории и указатели на Git-репозитории, в которых лежат Project workflow
   folders. Один <code>catalog.yaml</code>, никаких bytes сценариев, ключей или trust.
 </p>
@@ -18,7 +18,7 @@
   <a href="#как-добавить-сценарий">Как добавить сценарий</a> ·
   <a href="#записи">Записи</a> ·
   <a href="https://github.com/StenHigh/prifly-aif-workflows">AI Factory</a> ·
-  <a href="https://gitlab.com/stenhigh/prifly">Pri-Fly</a>
+  <a href="https://github.com/StenHigh/prifly">Pri-Fly</a>
 </p>
 
 <p align="center">
@@ -31,8 +31,8 @@
 
 ## Использование
 
-Этот репозиторий встроен в Pri-Fly как каталог по умолчанию (в версиях после
-`v0.5.0`, где появились команды `project workflows`):
+Этот репозиторий встроен в Pri-Fly как каталог по умолчанию (Pri-Fly `v0.6.0`
+и новее):
 
 ```sh
 prifly project workflows search                 # весь каталог
@@ -42,8 +42,8 @@ prifly project workflows add aif-classic        # запись → .prifly/workf
 prifly project workflows update aif-classic     # к exact commit того же ref
 ```
 
-Другой каталог указывается флагом `--catalog URL`. До релиза с этими
-командами `catalog.yaml` можно читать как обычный YAML и копировать папку из
+Другой каталог указывается флагом `--catalog URL`. Для более старых версий
+Pri-Fly `catalog.yaml` можно читать как обычный YAML и копировать папку из
 `repository/path` вручную.
 
 ## Формат `catalog.yaml`
@@ -79,7 +79,7 @@ workflows:
   `workflow.yaml`; иначе проект после обновления столкнётся с уже sealed
   package той же identity.
 - Неизвестные поля отклоняются. Локальная JSON Schema для редактора —
-  [`workflow-catalog-v1.schema.json`](https://gitlab.com/stenhigh/prifly/-/blob/main/schemas/authoring/workflow-catalog-v1.schema.json)
+  [`workflow-catalog-v1.schema.json`](https://github.com/StenHigh/prifly/blob/main/schemas/authoring/workflow-catalog-v1.schema.json)
   в репозитории Pri-Fly.
 
 ## Как добавить сценарий
