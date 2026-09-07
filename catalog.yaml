@@ -11,8 +11,8 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic
-    ref: v1.29.0
-    commit: 8332c7556e06d8c8af9dba778b815e848c40efb2
+    ref: v1.30.0
+    commit: 961f2318ddfbc7d44ce95b75ce92109c8cf647c1
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
@@ -20,6 +20,6 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-fanout
-    ref: v1.29.0
-    commit: 8332c7556e06d8c8af9dba778b815e848c40efb2
+    ref: v1.30.0
+    commit: 961f2318ddfbc7d44ce95b75ce92109c8cf647c1
     tags: [ai-factory, codex-cli, codex-app, claude-code]
