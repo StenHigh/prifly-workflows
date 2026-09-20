@@ -11,8 +11,8 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic
-    ref: v1.41.0
-    commit: 56759da2229b6d4b2ec9bf4bbf118921cb96ad37
+    ref: v1.42.0
+    commit: 14096ca48abffe228744e3c1af84f05d5196e025
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
@@ -20,15 +20,15 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-fanout
-    ref: v1.41.0
-    commit: 56759da2229b6d4b2ec9bf4bbf118921cb96ad37
+    ref: v1.42.0
+    commit: 14096ca48abffe228744e3c1af84f05d5196e025
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-profiled:
     title: AI Factory profiled development workflow
-    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own. Requires Pri-Fly 0.13.42.
+    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own. Requires Pri-Fly 0.13.43.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-profiled
-    ref: v1.41.0
-    commit: 56759da2229b6d4b2ec9bf4bbf118921cb96ad37
+    ref: v1.42.0
+    commit: 14096ca48abffe228744e3c1af84f05d5196e025
     tags: [ai-factory, codex-cli, codex-app, claude-code, model-profile]
