@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/StenHigh/prifly-workflows/commits/main"><img src="https://img.shields.io/github/last-commit/StenHigh/prifly-workflows?label=catalog%20updated&amp;color=1f6feb" alt="catalog updated"></a>
   <img src="https://img.shields.io/badge/schema-prifly--workflow--catalog%2F1-00ADD8" alt="prifly-workflow-catalog/1">
-  <img src="https://img.shields.io/badge/entries-2-4b5563" alt="2 entries">
+  <img src="https://img.shields.io/badge/entries-5-4b5563" alt="5 entries">
 </p>
 
 <p align="center">
@@ -96,9 +96,14 @@ workflows:
 
 | Имя | Категория | Репозиторий |
 |---|---|---|
-| `aif-classic` | software-delivery | `aif-classic` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) `v1.2.0` |
-| `aif-fanout` | software-delivery | `aif-fanout` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) `v1.2.0` |
+| `aif-classic` | software-delivery | `aif-classic` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-fanout` | software-delivery | `aif-fanout` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-profiled` | software-delivery | `aif-profiled` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-classic-continuation` | software-delivery | `aif-classic-continuation` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-profiled-continuation` | software-delivery | `aif-profiled-continuation` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 
-Оба сценария требуют skills AI Factory в host root проекта; их совместимость
+Все сценарии требуют skills AI Factory в host root проекта; их совместимость
 с опубликованным AI Factory package отслеживается в backlog репозитория
-`StenHigh/prifly-aif-workflows`.
+`StenHigh/prifly-aif-workflows`. Версия и commit каждой записи — в
+`catalog.yaml`. Continuation-записи запускаются `prifly project continue` от
+завершённого `partial`/`rejected` Run своего маршрута.
