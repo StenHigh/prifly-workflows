@@ -7,12 +7,12 @@ categories:
 workflows:
   aif-classic:
     title: AI Factory classic development workflow
-    description: Canonical AI Factory development workflow with bounded plan improvement.
+    description: Canonical AI Factory development workflow with bounded plan improvement. Requires Pri-Fly 0.13.53.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic
-    ref: v1.44.0
-    commit: 55bd102d2473f36548149a86661717eb14960280
+    ref: v1.45.0
+    commit: 6009463a5251a5314b004f78f330e24691b9552b
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
@@ -20,33 +20,33 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-fanout
-    ref: v1.44.0
-    commit: 55bd102d2473f36548149a86661717eb14960280
+    ref: v1.45.0
+    commit: 6009463a5251a5314b004f78f330e24691b9552b
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-profiled:
     title: AI Factory profiled development workflow
-    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own. Requires Pri-Fly 0.13.43.
+    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own. Requires Pri-Fly 0.13.53.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-profiled
-    ref: v1.44.0
-    commit: 55bd102d2473f36548149a86661717eb14960280
+    ref: v1.45.0
+    commit: 6009463a5251a5314b004f78f330e24691b9552b
     tags: [ai-factory, codex-cli, codex-app, claude-code, model-profile]
   aif-classic-continuation:
     title: AI Factory classic continuation quality tail
-    description: Quality gates (verify, security, review, commit) over an implementation a partial or rejected aif-classic Run left behind; started with prifly project continue. Requires Pri-Fly 0.13.46.
+    description: Quality gates (verify, security, review, commit) over an implementation a partial or rejected aif-classic Run left behind; started with prifly project continue. Requires Pri-Fly 0.13.53.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic-continuation
-    ref: v1.44.0
-    commit: 55bd102d2473f36548149a86661717eb14960280
+    ref: v1.45.0
+    commit: 6009463a5251a5314b004f78f330e24691b9552b
     tags: [ai-factory, codex-cli, codex-app, claude-code, continuation]
   aif-profiled-continuation:
     title: AI Factory profiled continuation quality tail
-    description: The continuation quality tail for aif-profiled Runs, every step declaring its model profile; started with prifly project continue. Requires Pri-Fly 0.13.46.
+    description: The continuation quality tail for aif-profiled Runs, every step declaring its model profile; started with prifly project continue. Requires Pri-Fly 0.13.53.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-profiled-continuation
-    ref: v1.44.0
-    commit: 55bd102d2473f36548149a86661717eb14960280
+    ref: v1.45.0
+    commit: 6009463a5251a5314b004f78f330e24691b9552b
     tags: [ai-factory, codex-cli, codex-app, claude-code, model-profile, continuation]
