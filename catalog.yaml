@@ -7,12 +7,12 @@ categories:
 workflows:
   aif-classic:
     title: AI Factory classic development workflow
-    description: Canonical AI Factory development workflow with bounded plan improvement; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.61.
+    description: Canonical AI Factory development workflow with bounded plan improvement; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.64.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic
-    ref: v1.47.0
-    commit: 2cfa1ef0bf832ce2a38846048929a3d9532d2b27
+    ref: v1.48.0
+    commit: 114460a35ceb42dd215c60e49a00c51e9da0278e
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
@@ -20,15 +20,15 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-fanout
-    ref: v1.47.0
-    commit: 2cfa1ef0bf832ce2a38846048929a3d9532d2b27
+    ref: v1.48.0
+    commit: 114460a35ceb42dd215c60e49a00c51e9da0278e
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-profiled:
     title: AI Factory profiled development workflow
-    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.61.
+    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.64.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-profiled
-    ref: v1.47.0
-    commit: 2cfa1ef0bf832ce2a38846048929a3d9532d2b27
+    ref: v1.48.0
+    commit: 114460a35ceb42dd215c60e49a00c51e9da0278e
     tags: [ai-factory, codex-cli, codex-app, claude-code, model-profile]
