@@ -38,6 +38,6 @@ workflows:
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-fix
-    ref: v1.51.1
-    commit: 2be86bf1683951f71c1606f3fb3930ac16af23db
+    ref: v1.51.2
+    commit: 0e93c36672e23ac404463f815cb89c7c3ffe31fe
     tags: [ai-factory, bug-fix, codex-cli, codex-app, claude-code]
