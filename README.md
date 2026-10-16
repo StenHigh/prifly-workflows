@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/StenHigh/prifly-workflows/commits/main"><img src="https://img.shields.io/github/last-commit/StenHigh/prifly-workflows?label=catalog%20updated&amp;color=1f6feb" alt="catalog updated"></a>
   <img src="https://img.shields.io/badge/schema-prifly--workflow--catalog%2F1-00ADD8" alt="prifly-workflow-catalog/1">
-  <img src="https://img.shields.io/badge/entries-7-4b5563" alt="7 entries">
+  <img src="https://img.shields.io/badge/entries-8-4b5563" alt="8 entries">
 </p>
 
 <p align="center">
@@ -43,6 +43,7 @@ prifly project workflows add aif-fix            # конкретный баг; P
 prifly project workflows add aif-review-evidence # приёмка готового кода; >= 0.13.76
 prifly project workflows add aif-ui-ux           # UI/UX готового интерфейса; >= 0.13.76
 prifly project workflows add aif-feature         # небольшая новая фича; >= 0.13.77
+prifly project workflows add openclaw-test-audit # аудит тестов; без AI Factory skills
 prifly project workflows update aif-classic     # к exact commit того же ref
 ```
 
@@ -107,8 +108,9 @@ workflows:
 | `aif-review-evidence` | software-delivery | `aif-review-evidence` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 | `aif-ui-ux` | software-delivery | `aif-ui-ux` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 | `aif-feature` | software-delivery | `aif-feature` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `openclaw-test-audit` | software-delivery | `openclaw-test-audit` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 
-Все сценарии требуют skills AI Factory в host root проекта; их совместимость
+Пакеты `aif-*` требуют skills AI Factory в host root проекта; их совместимость
 с опубликованным AI Factory package отслеживается в backlog репозитория
 `StenHigh/prifly-aif-workflows`. Версия и commit каждой записи — в
 `catalog.yaml`. Остановленный Run возобновляется тем же launch:
@@ -121,4 +123,7 @@ review-evidence1.0.0, ui-ux1.0.0, feature1.2.3. При выборе начнит
 [Установка, примеры и границы квалификации](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.52.0/docs/releases/v1.52.0.md).
 В feature приёмка последовательная по умолчанию; параллельные режимы требуют
 явного Codex CLI/project adapter. Параллельные UI/UX квалифицированы на1–3 кругах.
-Существующие четыре записи каталога, включая classic/profiled, сохраняют прежние pins.
+Семь прежних пакетов сохраняют содержимое и версии в v1.53.0; каталог закрепляет новый tag и source commit для всех восьми записей.
+
+
+В [v1.53.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.53.0) добавлен **openclaw-test-audit1.0.0** — самостоятельный аудит изменённых тестов по адаптированному checklist OpenClaw. Требует Pri-Fly ≥0.13.77 и Python3, без AI Factory/OpenClaw skills. При пустой выборке AI-сессия не запускается; автоматических вставок в существующие workflow нет. [Установка и границы](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.53.0/docs/releases/v1.53.0.md).
