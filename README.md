@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/StenHigh/prifly-workflows/commits/main"><img src="https://img.shields.io/github/last-commit/StenHigh/prifly-workflows?label=catalog%20updated&amp;color=1f6feb" alt="catalog updated"></a>
   <img src="https://img.shields.io/badge/schema-prifly--workflow--catalog%2F1-00ADD8" alt="prifly-workflow-catalog/1">
-  <img src="https://img.shields.io/badge/entries-4-4b5563" alt="4 entries">
+  <img src="https://img.shields.io/badge/entries-7-4b5563" alt="7 entries">
 </p>
 
 <p align="center">
@@ -40,6 +40,9 @@ prifly project workflows search review          # подстрока по име
 prifly project workflows search --category software-delivery
 prifly project workflows add aif-classic        # запись → .prifly/workflows/aif-classic
 prifly project workflows add aif-fix            # конкретный баг; Pri-Fly >= 0.13.76
+prifly project workflows add aif-review-evidence # приёмка готового кода; >= 0.13.76
+prifly project workflows add aif-ui-ux           # UI/UX готового интерфейса; >= 0.13.76
+prifly project workflows add aif-feature         # небольшая новая фича; >= 0.13.77
 prifly project workflows update aif-classic     # к exact commit того же ref
 ```
 
@@ -101,9 +104,21 @@ workflows:
 | `aif-fanout` | software-delivery | `aif-fanout` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 | `aif-profiled` | software-delivery | `aif-profiled` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 | `aif-fix` | software-delivery | `aif-fix` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-review-evidence` | software-delivery | `aif-review-evidence` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-ui-ux` | software-delivery | `aif-ui-ux` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
+| `aif-feature` | software-delivery | `aif-feature` в [`StenHigh/prifly-aif-workflows`](https://github.com/StenHigh/prifly-aif-workflows) |
 
 Все сценарии требуют skills AI Factory в host root проекта; их совместимость
 с опубликованным AI Factory package отслеживается в backlog репозитория
 `StenHigh/prifly-aif-workflows`. Версия и commit каждой записи — в
 `catalog.yaml`. Остановленный Run возобновляется тем же launch:
 `prifly project continue --source-run RUN`.
+
+
+Новые пакеты опубликованы в [v1.52.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.52.0):
+review-evidence1.0.0, ui-ux1.0.0, feature1.2.3. При выборе начните с задачи:
+готовый код — review-evidence; готовый интерфейс — ui-ux; новая небольшая фича — feature.
+[Установка, примеры и границы квалификации](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.52.0/docs/releases/v1.52.0.md).
+В feature приёмка последовательная по умолчанию; параллельные режимы требуют
+явного Codex CLI/project adapter. Параллельные UI/UX квалифицированы на1–3 кругах.
+Существующие четыре записи каталога, включая classic/profiled, сохраняют прежние pins.
