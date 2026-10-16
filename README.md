@@ -127,3 +127,6 @@ review-evidence1.0.0, ui-ux1.0.0, feature1.2.3. При выборе начнит
 
 
 В [v1.53.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.53.0) добавлен **openclaw-test-audit1.0.0** — самостоятельный аудит изменённых тестов по адаптированному checklist OpenClaw. Требует Pri-Fly ≥0.13.77 и Python3, без AI Factory/OpenClaw skills. При пустой выборке AI-сессия не запускается; автоматических вставок в существующие workflow нет. [Установка и границы](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.53.0/docs/releases/v1.53.0.md).
+
+
+[Готовые config Python/Node/monorepo и команды preview/start/continue](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit); [пошаговое подключение через extend.yaml](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit-extension). Примеры находятся на main; пакет1.0.0 и source pin v1.53.0 сохраняются.
