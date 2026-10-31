@@ -7,12 +7,12 @@ categories:
 workflows:
   aif-classic:
     title: AI Factory classic development workflow
-    description: Canonical AI Factory development workflow with bounded plan improvement; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.64.
+    description: Canonical AI Factory workflow; verify fail/no_work rejects without a gate and supports reviewed continuation at verify. Requires Pri-Fly 0.13.64.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-classic
-    ref: v1.55.0
-    commit: 42e60de8617e1ae6f38b77b0a3e008b538ad664b
+    ref: v1.56.0
+    commit: 1985ae1f3801bc87bb74ee74985cad58540e5a14
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-fanout:
     title: AI Factory fan-out plan refinement
@@ -25,12 +25,12 @@ workflows:
     tags: [ai-factory, codex-cli, codex-app, claude-code]
   aif-profiled:
     title: AI Factory profiled development workflow
-    description: The classic AI Factory route with every step declaring the model profile it wants; plan and implement run in a session of their own; a stopped Run resumes where it stopped. Requires Pri-Fly 0.13.64.
+    description: The classic route with model profiles; verify fail/no_work rejects without a gate and supports reviewed continuation at verify. Requires Pri-Fly 0.13.64.
     category: software-delivery
     repository: https://github.com/StenHigh/prifly-aif-workflows.git
     path: aif-profiled
-    ref: v1.55.0
-    commit: 42e60de8617e1ae6f38b77b0a3e008b538ad664b
+    ref: v1.56.0
+    commit: 1985ae1f3801bc87bb74ee74985cad58540e5a14
     tags: [ai-factory, codex-cli, codex-app, claude-code, model-profile]
   aif-fix:
     title: AI Factory bug fix workflow
