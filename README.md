@@ -123,10 +123,13 @@ review-evidence1.0.0, ui-ux1.0.0, feature1.2.3. При выборе начнит
 [Установка, примеры и границы квалификации](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.52.0/docs/releases/v1.52.0.md).
 В feature приёмка последовательная по умолчанию; параллельные режимы требуют
 явного Codex CLI/project adapter. Параллельные UI/UX квалифицированы на1–3 кругах.
-Семь прежних пакетов сохраняют содержимое и версии в v1.53.0; каталог закрепляет новый tag и source commit для всех восьми записей.
+В v1.53.0 семь прежних пакетов сохранили содержимое и версии.
 
 
 В [v1.53.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.53.0) добавлен **openclaw-test-audit1.0.0** — самостоятельный аудит изменённых тестов по адаптированному checklist OpenClaw. Требует Pri-Fly ≥0.13.77 и Python3, без AI Factory/OpenClaw skills. При пустой выборке AI-сессия не запускается; автоматических вставок в существующие workflow нет. [Установка и границы](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.53.0/docs/releases/v1.53.0.md).
 
 
-[Готовые config Python/Node/monorepo и команды preview/start/continue](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit); [пошаговое подключение через extend.yaml](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit-extension). Примеры находятся на main; пакет1.0.0 и source pin v1.53.0 сохраняются.
+[Готовые config Python/Node/monorepo и команды preview/start/continue](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit); [пошаговое подключение через extend.yaml](https://github.com/StenHigh/prifly-aif-workflows/tree/main/examples/test-audit-extension). Примеры находятся на main; пакет openclaw-test-audit сохраняет версию1.0.0.
+
+
+В [v1.54.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.54.0) опубликованы читаемые **aif-classic1.48.0** и **aif-profiled1.49.0**. Сложные YAML mappings раскрыты; verify-инструкция находится в Markdown. Маршруты и текст инструкций сохранены. Остальные шесть пакетов сохраняют содержимое и версии. Все восемь записей закрепляют tag v1.54.0 и commit5d4169b. [Установка, обновление и проверки](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.54.0/docs/releases/v1.54.0.md); [готовый classic example](https://github.com/StenHigh/prifly-aif-workflows/tree/v1.54.0/examples/classic).
