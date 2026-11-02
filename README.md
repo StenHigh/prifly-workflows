@@ -39,9 +39,9 @@ prifly project workflows search                 # весь каталог
 prifly project workflows search review          # подстрока по имени, описанию и tags
 prifly project workflows search --category software-delivery
 prifly project workflows add aif-classic        # запись → .prifly/workflows/aif-classic
-prifly project workflows add aif-fix            # конкретный баг; Pri-Fly >= 0.13.76
+prifly project workflows add aif-fix            # конкретный баг; 2.0.0 требует Core >= 0.13.86 и общие схемы
 prifly project workflows add aif-review-evidence # приёмка готового кода; >= 0.13.76
-prifly project workflows add aif-ui-ux           # UI/UX готового интерфейса; >= 0.13.76
+prifly project workflows add aif-ui-ux           # UI/UX; 2.0.0 требует Core >= 0.13.86 и общие схемы
 prifly project workflows add aif-feature         # небольшая новая фича; >= 0.13.77
 prifly project workflows add openclaw-test-audit # аудит тестов; без AI Factory skills
 prifly project workflows update aif-classic     # к exact commit того же ref
@@ -66,7 +66,7 @@ workflows:
     description: One sentence about the workflow.
     category: CATEGORY
     repository: https://host/owner/repo.git   # любой Git URL без credentials
-    path: relative/path/to/workflow/folder   # папка с workflow.yaml и marker prifly-project-workflow/1
+    path: relative/path/to/workflow/folder   # папка с workflow.yaml; опубликованный folder contract /1, /2 или /3
     ref: v1.2.0                              # tag, branch или commit; без ref — remote HEAD
     commit: 0123456789abcdef…                # необязательный pin: установка отказывает при другом commit
     tags: [free, form, keywords]             # необязательно
@@ -90,7 +90,7 @@ workflows:
 ## Как добавить сценарий
 
 1. Положите Project workflow folder (`workflow.yaml` с
-   `authoring: prifly-project-workflow/1`, `steps/`, `schemas/`, `contexts/`,
+   поддержанным `authoring` folder contract (`/1`, `/2` или `/3`), `steps/`, `schemas/`, `contexts/`,
    `workflows/`, `decisions/`) в любой публичный Git-репозиторий и отметьте
    release tag. Один репозиторий может содержать несколько папок.
 2. Добавьте запись в `catalog.yaml` и, если нужно, категорию.
@@ -139,3 +139,17 @@ review-evidence1.0.0, ui-ux1.0.0, feature1.2.3. При выборе начнит
 
 
 В [v1.56.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.56.0) опубликованы **classic1.49.0** и **profiled1.50.0**. Verify fail/no_work завершает Run как completed/rejected без обязательного gate; continue повторяет verify с сохранённым деревом. Эти две записи закрепляют tag v1.56.0/source1985ae1; остальные шесть сохраняют pins v1.55.0. Старые failed Runs автоматически не мигрируют. [Установка и ограничения](https://github.com/StenHigh/prifly-aif-workflows/blob/main/docs/releases/v1.56.0.md). Все три jobs CI41219942108 прошли на official Pri-Fly0.13.82; новую матрицу составляют12 cases/28 Runs.
+
+
+В [v1.57.0](https://github.com/StenHigh/prifly-aif-workflows/releases/tag/v1.57.0) опубликованы
+**classic/profiled/fix/UIUX2.0.0** и **feature1.4.0**. Пять записей закрепляют
+source `ee76702dec0d8e0958ef068ef58074ecf2db37e9`; остальные три сохраняют pins v1.55.0.
+Scoped `/5` points и public imports передают исходные report refs после repair/continue.
+Для первых четырёх пакетов нужны Core ≥0.13.86 и **явная установка**
+`aif:package/composition-contracts@1.2.0` из точного checkout этого выпуска.
+Каталог копирует только workflow folder. Он не копирует `contracts/` и `tools/`
+и не импортирует зависимости. [Полные команды](https://github.com/StenHigh/prifly-aif-workflows/blob/v1.57.0/docs/releases/v1.57.0.md)
+показывают установку, native update и явную миграцию owner extensions.
+Feature сохраняет прежние embedded review contracts; старые Runs не переписываются.
+Новые public exports используют folder `/3`; поддержка поиска каталога со старой
+версии CLI не означает поддержку каждого нового пакета. Сверяйте его требования.
